@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<malloc.h>
+#define N 100
+struct node
+{
+    char ch;
+    struct node* next;
+};
+int main()
+{
+    char ech;
+    struct node *l1=NULL,*head=NULL;
+    struct node *p;
+    scanf("%c",&ech);
+    for(int i=1;i<=7;i++)
+    {
+        //scanf("%c ",&ech);
+        //printf("%d\n",i);
+        p=(struct node*)malloc(sizeof(struct node));
+        p->ch=ech;
+        if(head==NULL)
+            head=p;
+        else
+            l1->next=p;
+        l1=p;
+        if(i!=7)
+        scanf("%c",&ech);
+        //printf("%c ",l1->ch);
+
+    }
+    p->next=NULL;
+    for(p=head;p!=NULL;p=p->next)
+    {
+        printf("%c ",p->ch);
+    }
+        return 0;
+}
+
+
